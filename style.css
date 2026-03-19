@@ -1,0 +1,103 @@
+:root {
+  --bg: hsl(0, 0%, 8%);
+  --card: hsl(0, 0%, 12%);
+  --button: hsl(0, 0%, 20%);
+  --text: hsl(0, 0%, 100%);
+  --muted: hsl(75, 94%, 57%);
+  --font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 385px;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 28px;
+}
+
+h1 {
+  font-size: 1.65rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.location {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.bio {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.links {
+  display: grid;
+  gap: 16px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background: var(--button);
+  color: var(--text);
+  font-weight: 700;
+  padding: 15px 18px;
+  border-radius: 10px;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--muted);
+  color: hsl(0, 0%, 12%);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 22px;
+    border-radius: 14px;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+}
